@@ -8,6 +8,16 @@ import (
 	"github.com/mtheusvalle/gopportunities/schemas"
 )
 
+// @BasePath /api/v1
+
+// @Summary Delete Opening
+// @Description Delete a new job opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Param id query string true "Opening idenfitification"
+// @Success 200 {object} schemas.OpeningResponse
+// @Router /opening [delete]
 func DeleteOpeningHandler(ctx *gin.Context) {
 	id := ctx.Query("id")
 
